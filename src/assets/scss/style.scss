@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("../img/background/bkg4.jpg");
+  background-repeat: no-repeat;
+  background-size: 5000px 900px;
+}
+
+.body {
+  position: absolute;
+  width: 794px; /* width of actual image */
+  height: 1123px; /* height of actual image */
+  background-image: url("../img/body.png");
+  background-repeat: no-repeat;
+}
+
+.background {
+  width: 794px;
+  width: 1123px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.gallery {
+  z-index: 2;
+  position: absolute;
+  left: 10px;
+}
+
+.gallery .gallery-item img {
+  display: block;
+  max-width: 95px;
+  background-color: #FFFFFF;
+  margin: 10px auto;
+  border-radius: 4px;
+  border: 5px solid #FFFFFF;
+  cursor: pointer;
+}
+
+#eyes,
+#ears,
+#nose,
+#mouth,
+#clothes {
+  position: absolute;
+  width: 794px; /* width of actual image */
+  height: 1123px; /* height of actual image */
+}
+
+
+// update this map when new items or categories are added
+$items: (
+  "eyes": 9,
+  "ears": 3,
+  "mouth": 4,
+  "nose": 3,
+  "clothes": 3,
+);
+
+@each $item, $total in $items {
+  @for $i from 1 through $total {
+    .#{$item}#{$i} {
+      background-image: url(../img/#{$item}/#{$item}#{$i}.png);
+    }
+  }
+}
+
+//////// another solution
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background: darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+
+// Position "next" buttons
+
+$height: 410px;
+
+@each $item, $total in $items {
+  $height: $height + 30px;
+
+  #next#{$item} {
+    position: absolute;
+    left: 600px;
+    top: $height;
+  }
+}
+// Position "randomize" button
+
+#randomize {
+  position: absolute;
+  left: 600px;
+  top: 600px;
+  font-weight: bold;
+}
+$items: (
+  "eyes": 9,
+  "ears": 3,
+  "mouth": 4,
+  "nose": 3,
+  "clothes": 3,
+);
+
+$height: 510px;
+
+@each $item, $total in $items {
+  $height: $height + 50px; //buttons will have 30px in between (vertically)
+
+  #next#{$item} {
+    position: absolute;
+    left: 700px;
+    top: $height;
+  }
+}
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 8px;
+  font-family: "Poiret One", cursive;
+  font-size: 1.6em;
+  $height: $height + 50px;
+}
+.home {
+  @include button-bg(#b67796);
+}
+.btn-1 {
+  @include button-bg(#bb689b);
+}
+.btn-2 {
+  @include button-bg(#4f90bb);
+}
+
+.btn-3 {
+  @include button-bg(#f1c40f);
+}
+
+.btn-4 {
+  @include button-bg(#e74c3c);
+}
+.btn-5 {
+  @include button-bg(#72e772);
+}
+
+.btn-6 {
+  @include button-bg(#72e772);
+}

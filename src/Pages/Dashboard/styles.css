@@ -1,0 +1,64 @@
+:root {
+  --text-color: rgb(24, 24, 24);
+}
+
+.dashboard-content {
+  padding: 50px;
+  color: var(--text-color);
+}
+
+.dashboard-content .games-list .title {
+  padding-left: 10px;
+}
+
+.dashboard-content .games-list ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-content .games-list .game-card {
+  display: block;
+  position: relative;
+  padding: 16px;
+  width: 33.33333%;
+  margin: 0 16px;
+  border-radius: 5px;
+}
+
+.dashboard-content .games-list .game-card .link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.dashboard-content .games-list .game-card .cover {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  height: 120px;
+}
+
+.dashboard-content .games-list .game-card .stars {
+  padding: 0 16px;
+  background-color: rgb(18, 18, 22);
+  color: rgba(255, 255, 255, .8);
+  border-radius: 10px;
+}
+
+.dashboard-content .games-list .game-card .game-content {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-content .games-list .game-card .game-content img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.dashboard-content .games-list .game-card .game-content .game-name {
+  background-color: rgba(255, 255, 255, .4);
+  border-radius: 10px;
+  padding: 0 16px;
+}

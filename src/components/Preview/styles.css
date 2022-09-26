@@ -1,0 +1,27 @@
+.preview {
+  width: 495px;
+  height: 700px;
+  position: absolute;
+  top: 0;
+
+  /* Comment left to place preview right */
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* Comment margin: auto to place preview right */
+  margin: auto;
+  background-image: url('../../assets/img/body.png');
+  background-size: cover;
+
+  /* Uncomment right to set preview at right */
+  /* right: 10px; */
+}
+
+.preview .elevation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+

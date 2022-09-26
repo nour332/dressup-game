@@ -1,0 +1,10 @@
+.title {
+  padding-left: 10px;
+}
+
+.cover {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  height: 120px;
+}

@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+body {
+  background-color: #e8eef4;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
